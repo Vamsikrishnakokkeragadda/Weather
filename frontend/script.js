@@ -1,7 +1,7 @@
 const weatherApp = document.getElementById("weatherApp");
 const searchForm = document.getElementById("searchForm");
 const themeToggle = document.getElementById("themeToggle");
-const API_BASE_URL = (window.ATMOS_API_URL || "").replace(/\/$/, "");
+const API_BASE_URL = (window.ATMOS_API_URL || "").trim().replace(/\/+$/, "");
 let carouselTimer;
 
 function apiUrl(path) {
