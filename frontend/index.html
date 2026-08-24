@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atmos Weather</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+<main class="weather-app" id="weatherApp" data-condition="clear">
+    <div class="atmosphere" aria-hidden="true">
+        <div class="weather-image" id="weatherImage"></div>
+        <div class="sun"></div>
+        <div class="moon"></div>
+        <div class="cloud cloud-one"></div>
+        <div class="cloud cloud-two"></div>
+        <div class="rain"></div>
+        <div class="landscape">
+            <div class="tree tree-one"><i></i><b></b></div>
+            <div class="tree tree-two"><i></i><b></b></div>
+            <div class="tree tree-three"><i></i><b></b></div>
+        </div>
+    </div>
+
+    <section class="glass-shell">
+        <aside class="sidebar glass-panel">
+            <div class="brand"><span class="brand-mark">✦</span><span>atmos</span></div>
+            <div class="side-date"><span id="todayLabel">TODAY</span><strong id="sideDate">--</strong></div>
+            <div class="mini-gauge">
+                <div class="gauge-ring"><span id="gaugeTemp">--</span><small>°C</small></div>
+                <span id="gaugeLabel">Current temperature</span>
+            </div>
+            <div class="side-location"><span class="pin">⌖</span><span id="sideCity">--</span></div>
+            <div class="sidebar-foot"><span>Visual Crossing</span><span class="live-dot">● LIVE</span></div>
+        </aside>
+
+        <div class="dashboard">
+            <header class="topbar">
+                <div class="location"><span class="pin">⌖</span><span id="city">Search a city</span><small>Live conditions</small></div>
+                <form class="search" id="searchForm">
+                    <input type="search" id="cityInput" placeholder="Search city" autocomplete="off" aria-label="City name">
+                    <button type="submit" aria-label="Search weather">⌕</button>
+                </form>
+                <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light theme" title="Switch theme"><span class="theme-icon">☼</span></button>
+            </header>
+
+            <section class="hero-weather">
+                <div class="hero-copy">
+                    <p class="eyebrow"><span class="status-dot"></span><span id="statusText">READY FOR A FORECAST</span></p>
+                    <div class="temperature"><span id="temp">--</span><sup>°</sup></div>
+                    <h1 id="desc">Find your weather</h1>
+                    <p class="feels">Humidity <strong id="humidity">--</strong>% <span>/</span> Wind <strong id="wind">--</strong> km/h</p>
+                </div>
+                <div class="condition-orbit" aria-hidden="true"><span class="orbit-ring"></span><span class="orbit-core">✦</span></div>
+            </section>
+
+            <section class="detail-row" aria-label="Current weather details">
+                <article class="detail glass-panel"><span class="detail-icon">◌</span><div><span>Humidity</span><strong><span id="humidityDetail">--</span>%</strong></div></article>
+                <article class="detail glass-panel"><span class="detail-icon">≋</span><div><span>Wind speed</span><strong><span id="windDetail">--</span> km/h</strong></div></article>
+                <article class="detail glass-panel"><span class="detail-icon">◒</span><div><span>Sky status</span><strong id="skyDetail">Waiting</strong></div></article>
+            </section>
+
+            <footer class="forecast-footer"><span>LIVE WEATHER SNAPSHOT</span><span id="lastUpdated">Enter a city to begin</span><span id="imageCredit" class="image-credit"></span><span class="footer-line"></span></footer>
+        </div>
+    </section>
+</main>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
